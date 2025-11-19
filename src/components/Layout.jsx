@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
   const toggleTheme = () => setTheme(theme === 'light' ? 'dark' : 'light');
 
   const navItems = [
-    { path: '/', label: 'Overview', icon: FileText },
+    { path: '/overview', label: 'Overview', icon: FileText },
     { path: '/getting-started', label: 'Getting Started', icon: Rocket },
     { path: '/onboarding', label: 'First Time Setup & Onboarding', icon: UserCheck },
     { path: '/dashboard', label: 'Dashboard Navigation', icon: LayoutDashboard },

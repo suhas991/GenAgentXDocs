@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/Layout';
 import Overview from './pages/Overview';
 import GettingStarted from './pages/GettingStarted';
@@ -18,7 +18,8 @@ function App() {
     <Router>
       <Layout>
         <Routes>
-          <Route path="/" element={<Overview />} />
+          <Route path="/" element={<Navigate to="/overview" replace />} />
+          <Route path="/overview" element={<Overview />} />
           <Route path="/getting-started" element={<GettingStarted />} />
           <Route path="/onboarding" element={<Onboarding />} />
           <Route path="/dashboard" element={<Dashboard />} />
