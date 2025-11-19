@@ -192,10 +192,6 @@
   transform: translateX(-100%);
 }
 
-.sidebar-nav {
-  padding: 24px 0;
-}
-
 .nav-item {
   display: flex;
   align-items: center;
