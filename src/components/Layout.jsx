@@ -27,6 +27,7 @@ const Layout = ({ children }) => {
 
   const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
   const toggleTheme = () => setTheme(theme === 'light' ? 'dark' : 'light');
+  const closeSidebar = () => setSidebarOpen(false);
 
   const navItems = [
     { path: '/overview', label: 'Overview', icon: FileText },
@@ -69,6 +70,15 @@ const Layout = ({ children }) => {
       </header>
 
       <div className="docs-body">
+        {/* Mobile Overlay */}
+        {sidebarOpen && (
+          <div 
+            className="sidebar-overlay" 
+            onClick={closeSidebar}
+            aria-hidden="true"
+          />
+        )}
+
         {/* Sidebar */}
         <aside className={`docs-sidebar ${sidebarOpen ? 'open' : 'closed'}`}>
           <nav className="sidebar-nav">
@@ -79,6 +89,7 @@ const Layout = ({ children }) => {
                   key={item.path}
                   to={item.path}
                   className={`nav-item ${location.pathname === item.path ? 'active' : ''}`}
+                  onClick={closeSidebar}
                 >
                   <IconComponent className="nav-icon" size={18} />
                   <span className="nav-label">{item.label}</span>

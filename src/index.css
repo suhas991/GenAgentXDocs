@@ -20,6 +20,12 @@
   -webkit-text-size-adjust: 100%;
 }
 
+/* Mobile Touch Improvements */
+html {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
 /* Body */
 body {
   margin: 0;

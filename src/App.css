@@ -362,3 +362,153 @@
   margin-bottom: 0;
 }
 
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .doc-page h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+  }
+
+  .doc-page h2 {
+    font-size: 22px;
+    margin-top: 36px;
+    margin-bottom: 16px;
+  }
+
+  .doc-page h3 {
+    font-size: 18px;
+    margin-top: 28px;
+    margin-bottom: 12px;
+  }
+
+  .doc-page h4 {
+    font-size: 16px;
+    margin-top: 24px;
+  }
+
+  .doc-page p,
+  .doc-page li {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .doc-page pre {
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .doc-page pre code {
+    font-size: 13px;
+  }
+
+  .copy-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+    top: 10px;
+    right: 10px;
+  }
+
+  .feature-list {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .feature-item {
+    padding: 20px;
+  }
+
+  .info-box {
+    padding: 16px 18px;
+    margin-bottom: 20px;
+  }
+
+  .doc-page table {
+    font-size: 13px;
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .doc-page th,
+  .doc-page td {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .step-list li {
+    padding-left: 45px;
+    margin-bottom: 28px;
+  }
+
+  .step-list li::before {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+
+  .step-list li strong {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .doc-page h1 {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  .doc-page h2 {
+    font-size: 20px;
+    margin-top: 32px;
+  }
+
+  .doc-page h3 {
+    font-size: 17px;
+  }
+
+  .doc-page p,
+  .doc-page li {
+    font-size: 14px;
+  }
+
+  .doc-page ul,
+  .doc-page ol {
+    padding-left: 20px;
+  }
+
+  .doc-page pre {
+    padding: 12px;
+    margin-left: -12px;
+    margin-right: -12px;
+    border-radius: 0;
+  }
+
+  .feature-item {
+    padding: 16px;
+  }
+
+  .info-box {
+    padding: 14px 16px;
+    border-radius: 6px;
+  }
+
+  .doc-page code {
+    font-size: 12px;
+    padding: 2px 6px;
+  }
+
+  .step-list li {
+    padding-left: 40px;
+  }
+
+  .step-list li::before {
+    width: 26px;
+    height: 26px;
+    font-size: 13px;
+  }
+}
+
