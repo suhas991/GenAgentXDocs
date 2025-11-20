@@ -5,23 +5,20 @@ const Onboarding = () => {
     <div className="doc-page">
       <h1>First Time Setup & Onboarding</h1>
 
-      <h2>Landing Page</h2>
-      <p>When you first visit GenAgentX, you'll see the landing page featuring:</p>
+      <h2>Welcome Screen</h2>
+      <p>When you first open GenAgentX, you'll see a friendly welcome page that shows you:</p>
       <ul>
-        <li><strong>Hero Section</strong> - Overview of features and main value proposition</li>
-        <li><strong>Features Carousel</strong> - 12 key features showcased in an interactive carousel</li>
-        <li><strong>Use Cases</strong> - 6 practical applications for GenAgentX</li>
-        <li><strong>How It Works</strong> - 4-step process explanation</li>
-        <li><strong>CTA Buttons</strong> - "Get Started Free" or "Try It Free" to begin onboarding</li>
+        <li><strong>What GenAgentX can do</strong> - Overview of AI agent capabilities</li>
+        <li><strong>Key Features</strong> - Interactive showcase of what you can build</li>
+        <li><strong>Real Use Cases</strong> - Examples of how people use AI agents</li>
+        <li><strong>How It Works</strong> - Simple 4-step process to get started</li>
+        <li><strong>Get Started Button</strong> - Click to begin your setup</li>
       </ul>
 
-      <h2>Theme Toggle</h2>
-      <ul>
-        <li><strong>Location:</strong> Top-right navigation bar</li>
-        <li><strong>Icon:</strong> Sun for light mode, Moon for dark mode</li>
-        <li><strong>Default:</strong> Light mode (preference is saved in localStorage)</li>
-        <li><strong>Persistence:</strong> Theme choice is remembered across sessions</li>
-      </ul>
+      <div className="info-box">
+        <h4>🎨 Personalize Your Experience</h4>
+        <p>Look for the sun/moon icon in the top-right corner to switch between light and dark themes. Your choice will be remembered!</p>
+      </div>
 
       <h2>Onboarding Modal (4-Step Process)</h2>
 
@@ -79,87 +76,45 @@ AIzaSyABCDEFGH1234567890abcdefghijklmno`}
         </li>
       </ol>
 
-      <h2>What Happens During Initialization</h2>
+      <h2>What Happens After Setup</h2>
 
-      <h3>1. localStorage Configuration</h3>
-      <CodeBlock language="json">
-{`{
-  "name": "Your Name",
-  "email": "your@email.com",
-  "company": "Company Name",
-  "apiKey": "AIza***",
-  "createdAt": "2025-11-19T10:00:00.000Z"
-}`}
-      </CodeBlock>
+      <p>Once you complete the setup, GenAgentX automatically:</p>
+      <ol className="step-list">
+        <li>
+          <strong>💾 Saves Your Settings</strong>
+          <p>Your name, email, and API key are stored securely on your device</p>
+        </li>
+        <li>
+          <strong>🛠️ Prepares the Workspace</strong>
+          <p>Creates storage for your agents, workflows, and execution history</p>
+        </li>
+        <li>
+          <strong>🤖 Creates Your AI Helper</strong>
+          <p>A special built-in agent that helps you create new agents easily</p>
+        </li>
+        <li>
+          <strong>✅ Takes You to Dashboard</strong>
+          <p>You're now ready to start creating and running AI agents!</p>
+        </li>
+      </ol>
 
-      <h3>2. IndexedDB Creation</h3>
-      <p>Four object stores are created:</p>
-      <table>
-        <thead>
-          <tr>
-            <th>Store Name</th>
-            <th>Purpose</th>
-            <th>Key Path</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><code>agents</code></td>
-            <td>Stores all AI agents</td>
-            <td>id (auto-increment)</td>
-          </tr>
-          <tr>
-            <td><code>executions</code></td>
-            <td>Logs agent runs</td>
-            <td>id (UUID)</td>
-          </tr>
-          <tr>
-            <td><code>workflows</code></td>
-            <td>Stores workflow configs</td>
-            <td>id (UUID)</td>
-          </tr>
-          <tr>
-            <td><code>workflow_executions</code></td>
-            <td>Logs workflow runs</td>
-            <td>id (UUID)</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h3>3. Default Agent: GenAgentX Assistant</h3>
-      <CodeBlock language="json">
-{`{
-  "name": "GenAgentX Assistant",
-  "role": "AI Agent Configuration Generator",
-  "goal": "Help users create new AI agents",
-  "model": "gemini-2.0-flash",
-  "taskDescription": "Generate importable agent configurations...",
-  "expectedOutput": "Valid JSON configuration",
-  "isDefault": true
-}`}
-      </CodeBlock>
-
-      <div className="info-box warning">
-        <h4>Important Notes</h4>
-        <ul>
-          <li>The default agent cannot be edited or deleted</li>
-          <li>It powers the AI Helper chatbot feature</li>
-          <li>Your API key is stored locally and never transmitted to external servers</li>
-          <li>All data remains in your browser's storage</li>
-        </ul>
+      <div className="info-box success">
+        <h4>🔒 Your Privacy is Protected</h4>
+        <p>Everything stays on your computer. Your API key and data are never sent to our servers - they're stored only in your browser.</p>
       </div>
 
-      <h2>Re-onboarding</h2>
-      <p>If you log out or clear your configuration, you'll need to complete onboarding again. However:</p>
+      <h2>If You Need to Start Over</h2>
+      <p>Don't worry if you need to log out or reset your settings:</p>
       <ul>
-        <li>Your agents will still be saved in IndexedDB</li>
-        <li>Workflows and execution history remain intact</li>
-        <li>You just need to re-enter your API key</li>
+        <li>✅ Your AI agents will still be saved</li>
+        <li>✅ Your workflows remain intact</li>
+        <li>✅ Your execution history is preserved</li>
+        <li>📝 You'll just need to enter your API key again</li>
       </ul>
 
       <div className="info-box success">
-        <h4>You're All Set!</h4>
-        <p>After onboarding, you'll be ready to create your first AI agent. Head to <a href="/creating-agents">Creating AI Agents</a> to learn how!</p>
+        <h4>🎉 You're All Set!</h4>
+        <p>After setup, you'll be ready to create your first AI agent. Head to <a href="#/creating-agents">Creating AI Agents</a> to learn how!</p>
       </div>
     </div>
   );

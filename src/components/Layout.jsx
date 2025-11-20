@@ -18,6 +18,7 @@ import {
   Package,
   Settings
 } from 'lucide-react';
+import PageNavigation from './PageNavigation';
 import './Layout.css';
 
 const Layout = ({ children }) => {
@@ -25,7 +26,7 @@ const Layout = ({ children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(() => {
     return window.innerWidth > 768;
   });
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('dark');
   const location = useLocation();
 
   // Close sidebar on mobile when route changes
@@ -66,6 +67,11 @@ const Layout = ({ children }) => {
     { path: '/import-export', label: 'Import & Export', icon: Package },
     { path: '/settings', label: 'Settings & Configuration', icon: Settings }
   ];
+
+  // Get current page index and navigation
+  const currentIndex = navItems.findIndex(item => item.path === location.pathname);
+  const prevPage = currentIndex > 0 ? navItems[currentIndex - 1] : null;
+  const nextPage = currentIndex < navItems.length - 1 ? navItems[currentIndex + 1] : null;
 
   return (
     <div className={`docs-container ${theme}`}>
@@ -126,6 +132,7 @@ const Layout = ({ children }) => {
         {/* Main Content */}
         <main className="docs-content">
           {children}
+          <PageNavigation prevPage={prevPage} nextPage={nextPage} />
         </main>
       </div>
     </div>

@@ -5,40 +5,30 @@ const GettingStarted = () => {
     <div className="doc-page">
       <h1>Getting Started</h1>
 
-      <h2>Prerequisites</h2>
+      <h2>What You Need</h2>
       <ul>
-        <li><strong>Modern Web Browser</strong> - Chrome, Edge, Firefox, or Safari</li>
-        <li><strong>Google Gemini API Key</strong> - Free tier available</li>
-        <li><strong>Desktop/Laptop</strong> - 1024px+ screen width recommended</li>
-        <li><strong>Internet Connection</strong> - Required for API calls to Gemini</li>
+        <li><strong>A Computer</strong> - Works on Windows, Mac, or Linux</li>
+        <li><strong>Web Browser</strong> - Chrome, Edge, Firefox, or Safari (recent version)</li>
+        <li><strong>Google Account</strong> - To get your free API key</li>
+        <li><strong>Internet Connection</strong> - Needed to connect to Google's AI</li>
       </ul>
 
-      <h2>Installation Options</h2>
-
-      <h3>Option 1: Use Live Deployment</h3>
-      <p>The easiest way to get started is to visit the live deployment:</p>
       <div className="info-box">
-        <p><strong>Live URL:</strong> <a href="https://suhas991.github.io/GenAgentX/" target="_blank" rel="noopener noreferrer">https://suhas991.github.io/GenAgentX/</a></p>
+        <h4>💡 Good to Know</h4>
+        <p>GenAgentX works best on a desktop or laptop. Mobile support is coming soon!</p>
       </div>
 
-      <h3>Option 2: Local Development</h3>
-      <p>If you want to run GenAgentX locally or contribute to development:</p>
+      <h2>How to Access GenAgentX</h2>
 
-      <CodeBlock language="bash">
-{`# Clone repository
-git clone https://github.com/suhas991/GenAgentX.git
+      <h3>✨ Start Using Right Away</h3>
+      <p>Simply open your web browser and visit:</p>
+      <div className="info-box success">
+        <h4>🌐 GenAgentX Web App</h4>
+        <p><a href="https://suhas991.github.io/GenAgentX/" target="_blank" rel="noopener noreferrer">https://suhas991.github.io/GenAgentX/</a></p>
+        <p><strong>That's it!</strong> No downloads or installations needed.</p>
+      </div>
 
-# Navigate to project
-cd GenAgentX
-
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-
-# Access at http://localhost:5173`}
-      </CodeBlock>
+      <p>The app runs completely in your browser - your data stays private on your device.</p>
 
       <h2>Getting Your API Key</h2>
       <ol className="step-list">
@@ -65,87 +55,50 @@ npm run dev
       </ol>
 
       <div className="info-box warning">
-        <h4>Important</h4>
+        <h4>🔐 Keep Your API Key Safe</h4>
         <ul>
-          <li>Never share your API key publicly</li>
-          <li>Don't commit it to version control</li>
-          <li>Monitor your usage in Google Cloud Console</li>
-          <li>The free tier has generous limits for personal use</li>
+          <li><strong>Never share your API key</strong> with anyone</li>
+          <li><strong>It's like a password</strong> - keep it private and secure</li>
+          <li><strong>Free tier included</strong> - Google provides generous free usage</li>
+          <li><strong>Monitor usage</strong> in your Google account if needed</li>
         </ul>
       </div>
 
-      <h2>Quick Start Guide</h2>
+      <h2>Quick Start - 3 Simple Steps</h2>
       <ol className="step-list">
         <li>
-          <strong>Access GenAgentX</strong>
-          <p>Open the application in your browser</p>
+          <strong>📝 Get Your Free API Key</strong>
+          <p>Visit Google AI Studio and create a free API key (see instructions below)</p>
         </li>
         <li>
-          <strong>Complete Onboarding</strong>
-          <p>Enter your name, email, and API key in the 4-step setup</p>
+          <strong>🚀 Open GenAgentX</strong>
+          <p>Go to the web app and complete the simple 4-step setup</p>
         </li>
         <li>
-          <strong>Explore the Dashboard</strong>
-          <p>Familiarize yourself with the interface and navigation</p>
-        </li>
-        <li>
-          <strong>Create Your First Agent</strong>
-          <p>Use the AI Helper or manual form to create an agent</p>
-        </li>
-        <li>
-          <strong>Run Your Agent</strong>
-          <p>Test your agent with a sample input</p>
-        </li>
-        <li>
-          <strong>Build a Workflow</strong>
-          <p>Chain multiple agents together for complex tasks</p>
+          <strong>✨ Create Your First AI Agent</strong>
+          <p>Use the AI Helper or fill in a simple form - you'll be done in minutes!</p>
         </li>
       </ol>
 
-      <h2>System Requirements</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Requirement</th>
-            <th>Minimum</th>
-            <th>Recommended</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Screen Width</td>
-            <td>1024px</td>
-            <td>1280px+</td>
-          </tr>
-          <tr>
-            <td>Browser</td>
-            <td>Chrome 90+</td>
-            <td>Latest version</td>
-          </tr>
-          <tr>
-            <td>RAM</td>
-            <td>2GB</td>
-            <td>4GB+</td>
-          </tr>
-          <tr>
-            <td>Storage</td>
-            <td>50MB free</td>
-            <td>100MB+</td>
-          </tr>
-          <tr>
-            <td>Internet</td>
-            <td>1 Mbps</td>
-            <td>5 Mbps+</td>
-          </tr>
-        </tbody>
-      </table>
+      <h2>Computer Requirements</h2>
+      <p>GenAgentX works on almost any modern computer:</p>
+      <ul>
+        <li><strong>Screen Size:</strong> Works best on laptop or desktop screens</li>
+        <li><strong>Browser:</strong> Any recent version of Chrome, Edge, Firefox, or Safari</li>
+        <li><strong>Internet:</strong> Stable connection for AI responses</li>
+      </ul>
+
+      <div className="info-box">
+        <h4>💡 Tip</h4>
+        <p>For the best experience, use a screen wider than 1024 pixels (most laptops and desktops).</p>
+      </div>
 
       <h2>What's Next?</h2>
-      <p>Now that you're set up, continue to the <a href="/onboarding">Onboarding</a> guide to learn about the first-time setup process.</p>
+      <p>Now that you know how to get started, continue to the <a href="#/onboarding">Setup Guide</a> to learn about the first-time setup process.</p>
 
       <div className="info-box success">
-        <h4>Pro Tip</h4>
-        <p>Start with the AI Helper chatbot to create your first agent - it's the easiest way to learn!</p>
+        <h4>🎯 Pro Tip</h4>
+        <p>Don't worry if you're not technical! The AI Helper chatbot will guide you through creating your first agent step-by-step.</p>
       </div>
     </div>
   );

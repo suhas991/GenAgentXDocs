@@ -431,7 +431,7 @@ Example filenames:
 
       <div className="info-box success">
         <h4> Next Steps</h4>
-        <p>Learn how to configure your application in <a href="/settings">Settings & Configuration</a>!</p>
+        <p>Learn how to configure your application in <a href="#/settings">Settings & Configuration</a>!</p>
       </div>
     </div>
   );

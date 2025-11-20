@@ -384,7 +384,7 @@ finalOutput = last agent's output
 
       <div className="info-box success">
         <h4> Next Steps</h4>
-        <p>Learn how to track all your executions in <a href="/execution-history">Execution History</a>!</p>
+        <p>Learn how to track all your executions in <a href="#/execution-history">Execution History</a>!</p>
       </div>
     </div>
   );

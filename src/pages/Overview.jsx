@@ -93,19 +93,29 @@ const Overview = () => {
         </ul>
       </div>
 
-      <h2>Technology Stack</h2>
-      <ul>
-        <li><strong>Frontend:</strong> React 19, React Router</li>
-        <li><strong>State Management:</strong> Zustand</li>
-        <li><strong>AI Integration:</strong> Google Gemini API</li>
-        <li><strong>Storage:</strong> IndexedDB (browser-based)</li>
-        <li><strong>Build Tool:</strong> Vite</li>
-        <li><strong>Styling:</strong> Custom CSS with theme support</li>
-      </ul>
+      <h2>Why Choose GenAgentX?</h2>
+      <div className="feature-list">
+        <div className="feature-item">
+          <h4>🎯 Simple & Intuitive</h4>
+          <p>No coding knowledge required - just fill in forms and let AI do the work</p>
+        </div>
+        <div className="feature-item">
+          <h4>🔒 Completely Private</h4>
+          <p>Your data stays on your computer - nothing is sent to our servers</p>
+        </div>
+        <div className="feature-item">
+          <h4>💰 Cost Effective</h4>
+          <p>Use Google's free API tier - perfect for personal projects and small teams</p>
+        </div>
+        <div className="feature-item">
+          <h4>⚡ Instant Results</h4>
+          <p>Create and run AI agents in minutes, not hours</p>
+        </div>
+      </div>
 
       <div className="info-box success">
         <h4>Ready to Get Started?</h4>
-        <p>Head over to the <a href="/getting-started">Getting Started</a> guide to begin your journey!</p>
+        <p>Head over to the <a href="#/getting-started">Getting Started</a> guide to begin your journey!</p>
       </div>
     </div>
   );
