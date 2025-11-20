@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
   Menu, 
@@ -21,9 +21,33 @@ import {
 import './Layout.css';
 
 const Layout = ({ children }) => {
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  // Initialize sidebar state based on screen size
+  const [sidebarOpen, setSidebarOpen] = useState(() => {
+    return window.innerWidth > 768;
+  });
   const [theme, setTheme] = useState('light');
   const location = useLocation();
+
+  // Close sidebar on mobile when route changes
+  useEffect(() => {
+    if (window.innerWidth <= 768) {
+      setSidebarOpen(false);
+    }
+  }, [location.pathname]);
+
+  // Handle window resize to properly manage sidebar state
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768) {
+        setSidebarOpen(true);
+      } else {
+        setSidebarOpen(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
   const toggleTheme = () => setTheme(theme === 'light' ? 'dark' : 'light');
@@ -70,15 +94,6 @@ const Layout = ({ children }) => {
       </header>
 
       <div className="docs-body">
-        {/* Mobile Overlay */}
-        {sidebarOpen && (
-          <div 
-            className="sidebar-overlay" 
-            onClick={closeSidebar}
-            aria-hidden="true"
-          />
-        )}
-
         {/* Sidebar */}
         <aside className={`docs-sidebar ${sidebarOpen ? 'open' : 'closed'}`}>
           <nav className="sidebar-nav">
@@ -98,6 +113,15 @@ const Layout = ({ children }) => {
             })}
           </nav>
         </aside>
+
+        {/* Mobile Overlay */}
+        {sidebarOpen && (
+          <div 
+            className="sidebar-overlay" 
+            onClick={closeSidebar}
+            aria-hidden="true"
+          />
+        )}
 
         {/* Main Content */}
         <main className="docs-content">
